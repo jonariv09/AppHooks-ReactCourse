@@ -7,14 +7,14 @@ export const FormWithCustomHook = () => {
     name: '',
     email: '',
     password: ''
-  })
+  });
 
   const { name, email, password } = formState;
 
   useEffect(() => {
     
     console.log('cambio email!!')
-  }, [email])
+  }, [email]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
