@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HookApp debe renderizar correctamente el componente 1`] = `
+<div
+  className="App"
+>
+  <h1>
+     Hola mundo 
+  </h1>
+</div>
+`;
