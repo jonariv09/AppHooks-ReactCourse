@@ -4,7 +4,7 @@ import { useFetch } from '../hooks/useFetch';
 
 export const MultipleCustomHooks = () => {
 
-  const { counter, increment, decrement } = useCounter(1);
+  const { counter, increment } = useCounter(1);
   const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
 
   const { quote, author } = !!data && data[0];
@@ -19,13 +19,13 @@ export const MultipleCustomHooks = () => {
         loading
         ? 
           (
-            <div> Loading.... </div>
+            <div className="loader"> Loading.... </div>
           )
         :
           (
             <blockquote>
-              <p> { quote } </p>
-              <footer> { author }  </footer>
+              <p className="quote"> { quote } </p>
+              <footer className="author"> { author }  </footer>
             </blockquote>
           )
       }
